@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "filename": "yellow_tripdata_2026-01.parquet",
+            "periode": "2026-01",
+            "status": "success",
+            "ingested_at": "2026-10-31T19:37:49.682193+00:00"
+        }
+    ]
+}
