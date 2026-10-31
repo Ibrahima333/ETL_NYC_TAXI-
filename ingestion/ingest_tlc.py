@@ -14,7 +14,7 @@ def load_ingestion_log():
         return log
 
 def is_already_ingested(filename) :
-    """verification si le fichier est déjà ingerer"""
+    """verification si le fichier est déjà ingerer """
 
     log = load_ingestion_log()
 
