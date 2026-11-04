@@ -5,6 +5,18 @@
             "periode": "2026-01",
             "status": "success",
             "ingested_at": "2026-10-31T19:37:49.682193+00:00"
+        },
+        {
+            "filename": "yellow_tripdata_2026-02.parquet",
+            "periode": "2026-02",
+            "status": "success",
+            "ingested_at": "2026-11-03T23:13:55.592637+00:00"
+        },
+        {
+            "filename": "yellow_tripdata_2026-03.parquet",
+            "periode": "2026-03",
+            "status": "success",
+            "ingested_at": "2026-11-03T23:30:05.989377+00:00"
         }
     ]
 }
