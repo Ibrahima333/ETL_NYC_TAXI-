@@ -10,13 +10,13 @@
             "filename": "yellow_tripdata_2026-02.parquet",
             "periode": "2026-02",
             "status": "success",
-            "ingested_at": "2026-11-03T23:13:55.592637+00:00"
+            "ingested_at": "2026-11-17T15:35:59.280015+00:00"
         },
         {
             "filename": "yellow_tripdata_2026-03.parquet",
             "periode": "2026-03",
             "status": "success",
-            "ingested_at": "2026-11-03T23:30:05.989377+00:00"
+            "ingested_at": "2026-11-17T15:52:32.069252+00:00"
         }
     ]
 }

@@ -3,6 +3,7 @@ from pathlib import Path
 from datetime import datetime,timezone
 import requests
 import pyarrow.parquet as pq
+from ingestion.s3_client import upload_file_to_s3, BUCKET_NAME
 
  # chemin du fichier 
 LOG_FILE = Path("ingestion/ingestion_log.json")
@@ -143,8 +144,26 @@ if __name__ == "__main__":
         #verification si le fichier est valide 
         if validate_parquet(file_path) :
          
-            # Enregistrer l'ingestion
-            register_ingestion(filename, period)
+            try:
+                # Envoyer le fichier vers RustFS
+                upload_file_to_s3(
+                file_path,
+                BUCKET_NAME,
+                filename )
+
+
+                print(f"Copie locale supprimée : {filename}")
+
+                # Enregistrer l'ingestion
+                register_ingestion(filename, period)
+
+                # Supprimer la copie locale
+                file_path.unlink()
+                
+            except Exception as error :
+                    print(f"Erreur pendant l'ingestion : {error}")
+                    print("La copie locale est conservée.")
+
 
 
 

@@ -3,3 +3,4 @@ pyarrow
 requests
 python-dotenv
 pytest
+boto3
